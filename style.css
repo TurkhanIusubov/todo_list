@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    -webkit-font-smoothing: antialiased; 
+    width: 100%;
+}
+body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    max-width: 450px;
+    width:90%;
+    height: fit-content;
+    background: #fffab7;
+    margin-top: 60px ;
+    padding: 27px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.d1{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.d1 form{
+    margin: 15px 0 20px 0 ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.d1 h1{
+    text-align: center;
+}
+.input_text{
+    height: 30px;
+    outline:none;
+    padding: 0 6px;
+    border-radius: 8px 0 0 8px;
+    border: 2px solid silver;
+    font-size: 1em;
+    border-right: none;
+}
+.input_text:focus{
+    border: 1px solid rgb(89, 89, 255);
+    /* border: 2.4px solid rgb(184, 184, 255);
+    border-right: 0.4px solid rgb(184, 184, 255); */
+    box-shadow: 0 0 2px 1px rgb(105, 105, 255);
+    /* outline: 4px blue; */
+}
+.input_text:focus + .add-btn{
+    border-left: 2px solid rgb(105, 105, 255);
+}
+.add-btn{
+    padding: 0 8px ;
+    background: rgba(255, 0, 0, 0.815);
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    border: 2px solid silver;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.add-btn:hover{
+    background: rgb(238, 0, 0);
+}
+.d2{
+    max-width: 300px;
+    width: 95%;
+    height: fit-content;
+}
+.ul1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 3px 7px 3px;
+    border-bottom: 1px solid #b6b387;
+}
+.ul1:last-child{
+    border-bottom: none;
+}
+.text_div{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    /* background: rgb(248, 215, 215); */
+}
+.btn-cb{
+    min-height: 18px;
+    min-width: 18px;
+    margin-right:5px ;
+    cursor: pointer;
+}
+.btn-cb:checked + li{
+    color: #888664;
+    text-decoration:line-through;
+}
+.btn-cb + li{
+    font-size: 1.1em;
+}
+.btns-div{
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+    position: relative;
+    /* background: rgb(30, 218, 177); */
+}
+.delete-btn, .edit-btn{
+    padding: 2px 3px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    border: 2px solid silver;
+    /* background: rgb(233, 233, 233); */
+    border-radius: 3px;
+    transition: .2s all;
+    cursor: pointer;
+}
+/* .delete-btn:hover, .edit-btn:hover{
+    background: rgb(248, 248, 248);
+} */
+.delete-btn{
+    background: #ff5353;
+    color: #fff;
+}
+.edit-btn{
+    background: rgb(51, 172, 27);
+    color: #fff;
+}
+.delete-btn:hover{
+    background: rgb(255, 0, 0);
+}
+.edit-btn:hover{
+    background: rgb(83, 216, 21);
+}
+.edit-input{
+    outline:none;
+    padding: 0 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 226, 207);
+    font-size: 1em;
+    font-style: italic;
+    width: 180px;
+}
+.save-btn{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px 3px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    border: 2px solid silver;
+    background: rgb(0, 204, 204);
+    border-radius: 3px;
+    transition: .2s all;
+    cursor: pointer;
+    color: white;
+}
+.save-btn:hover{
+    background: rgb(12, 224, 231);
+}
+select{
+    appearance: none;
+}
+.select-todos{
+    width: fit-content;
+    height: 25px;
+    padding: 0 5px 0 5px;
+    margin-bottom: 60px;
+    font-size: 1em;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid silver;
+    cursor: pointer;
+    transition: .2s;
+}
+.select-todos:hover, 
+.select-todos:focus{
+    border: 1px solid rgb(153, 153, 153);
+}
+.select-todos::after{
+    content: "\25BC";
+    position: absolute;
+    background: red;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .3s;
+}
